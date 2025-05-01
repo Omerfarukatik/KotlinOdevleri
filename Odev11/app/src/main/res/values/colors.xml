@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Arka Plan -->
+    <color name="background">#FFFDFDFD</color>
+
+    <!-- Metinler -->
+    <color name="textPrimary">#FF000000</color>
+    <color name="textSecondary">#99000000</color>
+
+    <!-- Kart ve kutular -->
+    <color name="cardBackground">#FFF0F0F0</color>
+
+    <!-- İkonlar (örneğin chip icon rengi) -->
+    <color name="iconTint">#FF6200EE</color>
+
+    <!-- Başlıklar ve vurgu -->
+    <color name="accent">#FF3700B3</color>
+
+    <!-- Border çizgileri, gölgeler vs. -->
+    <color name="divider">#FFE0E0E0</color>
+</resources>

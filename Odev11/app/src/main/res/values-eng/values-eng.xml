@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Atik App</string>
+    <string name="toolbarbaslik">Ömer Faruk ATİK English</string>
+    <string name="anasafyakarsilama">Hello</string>
+    <string name="hobiler">My hobbies</string>
+    <string name="hobi1">Riding a Bicycle</string>
+    <string name="hobi2">Coding veya Working with Software</string>
+    <string name="hobi3"> Sun Salutation</string>
+</resources>

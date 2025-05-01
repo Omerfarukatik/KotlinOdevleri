@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Atik App</string>
+    <string name="toolbarbaslik">Ömer Faruk ATİK</string>
+    <string name="anasafyakarsilama">Merhaba</string>
+    <string name="hobiler">Hobilerim</string>
+    <string name="hobi1">Bisiklete Binmek</string>
+    <string name="hobi2">Yazılımla Uğraşmak</string>
+    <string name="hobi3">Güneşi Selamlamak</string>
+</resources>
