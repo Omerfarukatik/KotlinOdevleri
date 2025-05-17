@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Samulas</string>
+    <string name="search">Bus/Station search</string>
+    <string name="titleSam">SAMKART PHYSICAL CARD</string>
+    <string name="cardNum">923B32DA000000</string>
+    <string name="cardName">berkay</string>
+    <string name="balance">50,00TL</string>
+    <string name="ic1">My Cards</string>
+    <string name="ic2">Selling Spots</string>
+    <string name="ic3">Balance Settings</string>
+    <string name="ic4">Sampark</string>
+    <string name="ic5">SamAir</string>
+    <string name="card1">Transportation Vehicles Departure Times</string>
+    <string name="card2">Transportation Vehicles</string>
+    <string name="card3">Stops</string>
+    <string name="card4">Favorites</string>
+</resources>

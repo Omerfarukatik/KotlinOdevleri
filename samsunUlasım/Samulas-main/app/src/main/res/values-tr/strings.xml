@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Samulas</string>
+    <string name="search">Hat/Durak arama</string>
+    <string name="titleSam">SAMKART FİZİKSEL KART</string>
+    <string name="cardNum">923B32DA000000</string>
+    <string name="cardName">berkay</string>
+    <string name="balance">50,00TL</string>
+    <string name="ic1">Kartlarım</string>
+    <string name="ic2">Satış Noktaları</string>
+    <string name="ic3">Bakiye İşlemleri</string>
+    <string name="ic4">Sampark</string>
+    <string name="ic5">SamAir</string>
+    <string name="card1">Ulaşım Araçları Hareket Saatleri</string>
+    <string name="card2">Ulaşım Araçları</string>
+    <string name="card3">Duraklar</string>
+    <string name="card4">Favoriler</string>
+</resources>

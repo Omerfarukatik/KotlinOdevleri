@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="toolBar">#FFFFFFFF</color>
+    <color name="anaRenk">#F7F7F7</color>
+    <color name="yaziRenk">#535353</color>
+    <color name="ikinciRenk">#E8E8E8</color>
+    <color name="iconRenk">#ED1B36</color>
+</resources>
