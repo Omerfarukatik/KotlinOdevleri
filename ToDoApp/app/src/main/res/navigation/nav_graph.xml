@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.todoapp.ui.fragment.HomeFragment"
+        android:label="ToDo List">
+        <action
+            android:id="@+id/action_homeFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_updateFragment"
+            app:destination="@id/updateFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.todoapp.ui.fragment.AddFragment"
+        android:label="Add ToDo" />
+
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.example.todoapp.ui.fragment.UpdateFragment"
+        android:label="Güncelle"
+        tools:layout="@layout/fragment_update">
+
+        <argument android:name="id" app:argType="integer" />
+        <argument android:name="title" app:argType="string" />
+        <argument android:name="description" app:argType="string" />
+        <argument android:name="date" app:argType="string" />
+    </fragment>
+
+</navigation>
