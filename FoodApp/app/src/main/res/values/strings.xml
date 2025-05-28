@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FoodApp</string>
+
+    <!-- Kart öğesi için -->
+    <string name="food_image_desc">Yemek görseli</string>
+    <string name="delete_button_desc">Sil düğmesi</string>
+    <string name="food_name_placeholder">Yemek Adı</string>
+    <string name="food_quantity_placeholder">Adet: 1</string>
+    <string name="food_price_placeholder">₺25</string>
+</resources>
