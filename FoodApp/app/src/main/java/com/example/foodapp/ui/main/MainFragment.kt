@@ -9,6 +9,7 @@ import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.foodapp.R
 import com.example.foodapp.databinding.FragmentMainBinding
@@ -20,7 +21,6 @@ class MainFragment : Fragment() {
     private val binding get() = _binding!!
     private lateinit var viewModel: MainViewModel
     private lateinit var adapter: MainAdapter
-    private var allFoods = listOf<com.example.foodapp.data.model.Food>() // Tüm yemekler
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -43,50 +43,38 @@ class MainFragment : Fragment() {
         }
 
         binding.recyclerView.adapter = adapter
-        binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        binding.recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
 
-        binding.goToCartButton.setOnClickListener {
-            findNavController().navigate(R.id.action_mainFragment_to_cartFragment)
-        }
-
+        // Veri çekiliyor
         viewModel.fetchAllFoods()
 
+        // Gelen yemekleri doğrudan listele
         viewModel.foods.observe(viewLifecycleOwner) { foodList ->
-            allFoods = foodList
-            adapter.submitList(allFoods)
+            adapter.submitList(foodList)
         }
 
+        // Hata mesajı varsa göster
         viewModel.error.observe(viewLifecycleOwner) { errorMsg ->
             errorMsg?.let {
                 Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
             }
         }
 
-        setupSearchView()
-    }
-
-    private fun setupSearchView() {
+        // Arama kısmı (opsiyonel)
         binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-            override fun onQueryTextSubmit(query: String?): Boolean {
-                return false // Arama tuşuna basılınca yapılacak işlem yok
-            }
-
+            override fun onQueryTextSubmit(query: String?): Boolean = false
             override fun onQueryTextChange(newText: String?): Boolean {
-                filterFoods(newText)
+                val filteredList = if (!newText.isNullOrBlank()) {
+                    viewModel.foods.value?.filter {
+                        it.yemek_adi.contains(newText, ignoreCase = true)
+                    }
+                } else {
+                    viewModel.foods.value
+                }
+                adapter.submitList(filteredList)
                 return true
             }
         })
-    }
-
-    private fun filterFoods(query: String?) {
-        val filteredList = if (!query.isNullOrBlank()) {
-            allFoods.filter {
-                it.yemek_adi.contains(query, ignoreCase = true)
-            }
-        } else {
-            allFoods
-        }
-        adapter.submitList(filteredList)
     }
 
     override fun onDestroyView() {

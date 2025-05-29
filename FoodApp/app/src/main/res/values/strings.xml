@@ -7,4 +7,9 @@
     <string name="food_name_placeholder">Yemek Adı</string>
     <string name="food_quantity_placeholder">Adet: 1</string>
     <string name="food_price_placeholder">₺25</string>
+    <string name="greeting_text">Hoş geldin, Faruk!</string>
+    <string name="search_hint">Yemek ara...</string>
+    <string name="go_to_cart">Sepete Git</string>
+    <string name="profile_icon_desc">Profil resmi</string>
+
 </resources>
